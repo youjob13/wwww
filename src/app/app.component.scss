@@ -1,0 +1,14 @@
+.parallax-wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.inner-body {
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

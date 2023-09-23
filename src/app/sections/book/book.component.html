@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <form class="form">
+    <div class="section">
+      <div class="section-title expanded">
+        <h5>Choose Appointment</h5>
+      </div>
+
+      <ng-container *ngFor="let service of services">
+        <div class="service-type">
+          <div class="description">
+            <span class="title">{{ service.name }}</span>
+            <span class="price">{{ service.price }}</span>
+          </div>
+
+          <button class="button">Book</button>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="section">
+      <div class="section-title collapsed">
+        <h5>Choose date</h5>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,82 @@
+@import "../../core.scss";
+
+:host {
+  @include section-gap;
+
+  position: relative;
+  display: block;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.component-container {
+  @include container;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.title {
+  @include medium-font;
+
+  font-size: px-to-rem(46px);
+  line-height: 1.2;
+  margin-bottom: px-to-rem(20px);
+  color: #0c0b09;
+}
+
+.image-wrapper {
+  @include flex-center;
+}
+
+img {
+  @include image-hover;
+}
+
+.content-wrapper {
+  @include regular-font;
+
+  padding: px-to-rem(100px) 0;
+  line-height: px-to-rem(26px);
+}
+
+.flower {
+  position: absolute;
+  top: 0;
+  left: 6%;
+  width: px-to-rem(400px);
+  z-index: 99;
+}
+
+svg path {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  stroke-width: 0.4;
+  stroke: #000;
+  fill: none;
+  transition: stroke-dashoffset 1s;
+}
+
+.nails {
+  position: absolute;
+  top: 48%;
+  left: 70%;
+  width: px-to-rem(550px);
+  z-index: 99;
+}
+
+@media (max-width: 1024px) {
+  .component-container {
+    grid-template-columns: 1fr;
+  }
+
+  .content-wrapper {
+    padding: px-to-rem(40px) 0;
+  }
+
+  .flower {
+    width: px-to-rem(300px);
+    top: px-to-rem(-60px);
+    left: px-to-rem(-50px);
+  }
+}

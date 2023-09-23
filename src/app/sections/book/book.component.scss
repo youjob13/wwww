@@ -1,0 +1,80 @@
+@import "../../core.scss";
+
+:host {
+  @include container;
+  @include section-gap;
+
+  counter-reset: section;
+}
+
+.wrapper {
+  @include flex-width-center;
+  @include regular-font;
+}
+
+.form {
+  display: grid;
+  row-gap: px-to-rem(40px);
+  width: 100%;
+  max-width: px-to-rem(800px);
+}
+
+.service-type {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #eee;
+  padding: px-to-rem(35px) px-to-rem(30px);
+}
+
+.section-title {
+  display: flex;
+  position: relative;
+  column-gap: px-to-rem(10px);
+  left: px-to-rem(-30px);
+
+  &::before {
+    @include flex-center;
+    position: relative;
+    height: 100%;
+    background-color: rgb(26, 26, 26);
+    border-radius: 50%;
+    width: px-to-rem(25px);
+    color: #fff;
+  }
+}
+
+.section {
+  .section-title {
+    &::before {
+      counter-increment: section;
+      content: counter(section);
+    }
+  }
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  column-gap: px-to-rem(10px);
+}
+
+.button {
+  background-color: rgb(26, 26, 26);
+  color: #fff;
+  padding: px-to-rem(5px) px-to-rem(30px);
+  transition: 0.4s all;
+
+  &:hover {
+    box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-title {
+    left: 0;
+  }
+
+  .service-type {
+    padding: px-to-rem(25px) px-to-rem(20px);
+  }
+}

@@ -1,0 +1,89 @@
+@import "../../core.scss";
+
+:host {
+  @include container;
+  @include section-gap;
+
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 px-to-rem(150px);
+}
+
+.content-wrapper {
+  @include block-width-center;
+  @include regular-font;
+
+  padding: px-to-rem(50px) 0;
+}
+
+.slider {
+  @include image-hover;
+
+  display: block;
+  max-width: 68%;
+  margin: 0 auto;
+}
+
+.picsum-img-wrapper {
+  @include flex-width-center;
+
+  height: px-to-rem(600px);
+}
+
+img {
+  @include image-fit;
+  @include image-hover;
+
+  width: auto;
+}
+
+.title {
+  @include medium-font;
+
+  text-align: center;
+  font-size: px-to-rem(46px);
+  line-height: 1.2;
+  margin-bottom: px-to-rem(65px);
+}
+
+svg {
+  position: absolute;
+  top: -5%;
+  width: 80vw;
+  left: 19%;
+  z-index: -1;
+  bottom: 0%;
+}
+
+svg path {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  stroke-width: 0.4;
+  stroke: #000;
+  fill: none;
+  transition: stroke-dashoffset 1s;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .slider {
+    max-width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .content-wrapper {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
