@@ -69,7 +69,7 @@
     position: fixed;
     z-index: 99;
     transform: scale(0);
-    bottom: 0;
+    bottom: px-to-rem(35px);
     left: 0;
     right: 0;
     column-gap: px-to-rem(10px);
