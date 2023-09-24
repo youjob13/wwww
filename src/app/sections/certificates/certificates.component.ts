@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslocoModule } from '@ngneat/transloco';
 import { SvgAnimationDirective } from 'src/app/common/svg-animation.directive';
 
 @Component({
@@ -9,7 +10,7 @@ import { SvgAnimationDirective } from 'src/app/common/svg-animation.directive';
   styleUrls: ['./certificates.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CommonModule, NgbCarouselModule],
+  imports: [CommonModule, NgbCarouselModule, TranslocoModule],
 })
 export class CertificatesComponent extends SvgAnimationDirective {
   @HostBinding('id') readonly id = 'certificates';

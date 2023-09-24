@@ -8,6 +8,7 @@ import {
   ViewChild,
   inject,
 } from '@angular/core';
+import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
 import { calcScrollPercentage } from 'src/app/common/utils';
 
 @Component({
@@ -15,7 +16,7 @@ import { calcScrollPercentage } from 'src/app/common/utils';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslocoModule],
   standalone: true,
 })
 export class MainComponent implements AfterViewInit {
@@ -51,10 +52,12 @@ export class MainComponent implements AfterViewInit {
   }
 
   private setStyle(element: any, scrollPercentage: number) {
-    this.renderer.setStyle(
-      element,
-      'transform',
-      `scale(${1 - scrollPercentage * this.FACTOR})`
-    );
+    const scaleValue = 1 - scrollPercentage * this.FACTOR;
+
+    if (scaleValue < 0) {
+      return;
+    }
+
+    this.renderer.setStyle(element, 'transform', `scale(${scaleValue})`);
   }
 }

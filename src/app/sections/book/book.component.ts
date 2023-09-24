@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
+import { TranslocoModule } from '@ngneat/transloco';
 
 interface IService {
   name: string;
@@ -12,7 +13,7 @@ interface IService {
   styleUrls: ['./book.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslocoModule],
 })
 export class BookComponent {
   public readonly services: Array<IService> = [

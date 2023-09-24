@@ -2,7 +2,7 @@
   <form class="form">
     <div class="section">
       <div class="section-title expanded">
-        <h5>Choose Appointment</h5>
+        <h5>{{ "book.title" | transloco }}</h5>
       </div>
 
       <ng-container *ngFor="let service of services">
@@ -12,14 +12,14 @@
             <span class="price">{{ service.price }}</span>
           </div>
 
-          <button class="button">Book</button>
+          <button class="button">{{ "book.button" | transloco }}</button>
         </div>
       </ng-container>
     </div>
 
     <div class="section">
       <div class="section-title collapsed">
-        <h5>Choose date</h5>
+        <h5>{{ "book.dateTitle" | transloco }}</h5>
       </div>
     </div>
   </form>

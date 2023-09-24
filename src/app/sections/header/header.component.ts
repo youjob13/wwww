@@ -7,6 +7,7 @@ import {
   ViewChild,
   inject,
 } from '@angular/core';
+import { LanguageTranslateService } from 'src/app/common/language-translate.service';
 import { calcScrollPercentage } from 'src/app/common/utils';
 
 @Component({
@@ -22,12 +23,17 @@ export class HeaderComponent implements AfterViewInit {
     | ElementRef
     | undefined;
 
+  public readonly languageTranslateService = inject(LanguageTranslateService);
   private readonly document = inject(DOCUMENT);
   private wrapper: Element | null = null;
 
   ngAfterViewInit(): void {
     this.wrapper = this.document.querySelector('.inner-body');
     this.wrapper?.addEventListener('scroll', this.hideMenuOnScroll.bind(this));
+  }
+
+  public changeLanguage(): void {
+    this.languageTranslateService.changeLanguage();
   }
 
   private hideMenuOnScroll(): void {

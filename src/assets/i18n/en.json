@@ -1,0 +1,37 @@
+{
+  "main": {
+    "title": "Annushka nails 🤍",
+    "subtitle": "Hamburg"
+  },
+  "aboutMe": {
+    "title": "About me",
+    "paragraph": {
+      "first": "My name is Anna Chirkova.",
+      "second": "I am a passionate nails master with a creativeflair. My dedication to precision and client satisfaction drives me to provide top-notch nail care services, leaving your nails looking flawless and fabulous.",
+      "third": "Let's transform your nails into works of art together! 💅"
+    }
+  },
+  "examples": {
+    "title": "My portfolio"
+  },
+  "book": {
+    "title": "Choose Appointment",
+    "button": "Book",
+    "dateTitle": "Choose Date"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "paragraph": {
+      "first": "In my journey as a skilled nail master, I've diligently pursued professional development and education to hone my craft.",
+      "second": "Your confidence in my abilities is well-placed, backed by a solid foundation of accredited training."
+    }
+  },
+  "footer": {
+    "title": "You can reach me in",
+    "links": {
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "whatsapp": "Whatsapp"
+    }
+  }
+}

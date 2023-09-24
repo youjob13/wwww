@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -5,6 +6,7 @@ import {
   HostBinding,
   Renderer2,
 } from '@angular/core';
+import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
   selector: 'chirk-examples',
@@ -12,6 +14,7 @@ import {
   styleUrls: ['./examples.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
+  imports: [CommonModule, TranslocoModule],
 })
 export class ExamplesComponent {
   @HostBinding('id') readonly id = 'examples';

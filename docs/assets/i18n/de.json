@@ -1,0 +1,37 @@
+{
+  "main": {
+    "title": "Annushka nägel 🤍",
+    "subtitle": "Hamburg"
+  },
+  "aboutMe": {
+    "title": "Über mich",
+    "paragraph": {
+      "first": "Mein name ist Anna Chirkova.",
+      "second": "Ich bin ein leidenschaftlicher Nagelmeister mit kreativem Flair. Mein Engagement für Präzision und Kundenzufriedenheit treibt mich an, erstklassige Nagelpflegedienste anzubieten, damit Ihre Nägel makellos und fabelhaft aussehen.",
+      "third": "Lassen Sie uns gemeinsam Ihre Nägel in Kunstwerke verwandeln! 💅"
+    }
+  },
+  "examples": {
+    "title": "Mein Portfolio"
+  },
+  "book": {
+    "title": "Termin Wählen",
+    "button": "Registrieren",
+    "dateTitle": "Datum Wählen"
+  },
+  "certificates": {
+    "title": "Zertifikat",
+    "paragraph": {
+      "first": "Auf meiner Reise als erfahrener Nagelmeister habe ich fleißig meine berufliche Entwicklung und Ausbildung verfolgt, um mein Handwerk zu verfeinern.",
+      "second": "Ihr Vertrauen in meine Fähigkeiten ist gut platziert, gestützt auf eine solide Grundlage akkreditierter Schulungen."
+    }
+  },
+  "footer": {
+    "title": "Sie erreichen mich in",
+    "links": {
+      "instagram": "Instagram",
+      "telegram": "Telegramm",
+      "whatsapp": "Whatsapp"
+    }
+  }
+}

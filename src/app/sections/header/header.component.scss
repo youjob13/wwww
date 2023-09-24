@@ -29,6 +29,20 @@
   color: $black;
 }
 
+.language {
+  @include regular-font;
+  @include text-hover;
+
+  position: absolute;
+  right: 0;
+  top: px-to-rem(10px);
+  padding: px-to-rem(4px);
+  cursor: pointer;
+  background-color: $black;
+  color: $white;
+  font-size: px-to-rem(12px);
+}
+
 @media (max-width: 1024px) {
   :host {
     @include flex-center;
