@@ -22,6 +22,8 @@ import { calcScrollPercentage } from 'src/app/common/utils';
 export class MainComponent implements AfterViewInit {
   @ViewChild('myTitle', { static: true }) titleRef: ElementRef | undefined;
   @ViewChild('subtitle', { static: true }) subtitle: ElementRef | undefined;
+  @ViewChild('nailsRef', { static: true }) nailsRef: ElementRef | undefined;
+  @ViewChild('polishRef', { static: true }) polishRef: ElementRef | undefined;
 
   public readonly title = 'Annushka nails 🤍';
   private readonly FACTOR = 5;
@@ -40,24 +42,58 @@ export class MainComponent implements AfterViewInit {
     if (
       this.wrapper == null ||
       this.titleRef == null ||
-      this.subtitle == null
+      this.subtitle == null ||
+      this.nailsRef == null ||
+      this.polishRef == null
     ) {
       return;
     }
 
     const scrollPercentage = calcScrollPercentage(this.wrapper, this.document);
 
-    this.setStyle(this.titleRef.nativeElement, scrollPercentage);
-    this.setStyle(this.subtitle.nativeElement, scrollPercentage);
+    this.setScaleStyle(this.titleRef.nativeElement, scrollPercentage);
+    this.setScaleStyle(this.subtitle.nativeElement, scrollPercentage);
+    this.setScaleStyle(this.polishRef.nativeElement, scrollPercentage, 7.5);
+    this.setScaleStyle(this.nailsRef.nativeElement, scrollPercentage, 10);
   }
 
-  private setStyle(element: any, scrollPercentage: number) {
-    const scaleValue = 1 - scrollPercentage * this.FACTOR;
+  private setScaleStyle(
+    element: any,
+    scrollPercentage: number,
+    factor: number = this.FACTOR
+  ) {
+    this.setStyle({
+      element,
+      scrollPercentage,
+      property: 'transform',
+      value: `scale`,
+      factor,
+    });
+  }
+
+  private setStyle({
+    element,
+    scrollPercentage,
+    property,
+    factor,
+    value,
+  }: {
+    element: any;
+    scrollPercentage: number;
+    property: string;
+    factor?: number;
+    value?: string;
+  }) {
+    const scaleValue = 1 - scrollPercentage * (factor || this.FACTOR);
 
     if (scaleValue < 0) {
       return;
     }
 
-    this.renderer.setStyle(element, 'transform', `scale(${scaleValue})`);
+    this.renderer.setStyle(
+      element,
+      property,
+      value != null ? `${value}(${scaleValue})` : scaleValue
+    );
   }
 }

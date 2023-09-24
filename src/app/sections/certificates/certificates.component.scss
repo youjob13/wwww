@@ -68,6 +68,55 @@ svg path {
   fill: none;
 }
 
+.container-text {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  min-width: 100%;
+}
+
+.running-stroke {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  animation: running-text 30s linear infinite;
+  column-gap: px-to-rem(15px);
+
+  p {
+    display: inline-flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    font-size: px-to-rem(56px);
+    color: $pink;
+    -webkit-text-stroke: 1px $pink;
+    -webkit-text-fill-color: transparent;
+  }
+
+  span {
+    width: px-to-rem(46px);
+    height: px-to-rem(8px);
+    background-color: $white;
+    display: block;
+    border: 1px solid $pink;
+    margin: 0 px-to-rem(20px);
+  }
+}
+
+@keyframes running-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media (max-width: 1024px) {
   .wrapper {
     grid-template-columns: 1fr;
