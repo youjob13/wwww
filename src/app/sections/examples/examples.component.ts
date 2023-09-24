@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  HostBinding,
+  Renderer2,
+} from '@angular/core';
 
 @Component({
   selector: 'chirk-examples',
@@ -9,4 +15,17 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 })
 export class ExamplesComponent {
   @HostBinding('id') readonly id = 'examples';
+
+  constructor(private readonly renderer: Renderer2) {}
+
+  private isZoomed = false;
+
+  public zoomPhoto(element: Element) {
+    if (this.isZoomed) {
+      this.renderer.addClass(element, 'zoomed');
+    } else {
+      this.renderer.removeClass(element, 'zoomed');
+    }
+    this.isZoomed = !this.isZoomed;
+  }
 }

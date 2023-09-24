@@ -2,7 +2,8 @@
 
 :host {
   display: block;
-  background-color: beige;
+  position: relative;
+  background-color: $beige;
 }
 
 .wrapper {
@@ -67,3 +68,38 @@ img {
   @include image-hover;
   @include image-fit;
 }
+
+// @media (max-width: 1024px) {
+//   .examples {
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 16.2% 23.8% 20% 6.2% 23.8% 12.3% 16.5% 31.2%;
+//     gap: 10px 10px;
+//     grid-template-areas:
+//       ". example_1"
+//       "example_2 example_1"
+//       "example_2 example_3"
+//       "example_2 example_3"
+//       "example_4 example_3"
+//       "example_4 example_5"
+//       "example_6 example_5"
+//       "example_6 .";
+//   }
+//   .example_1 {
+//     grid-area: example_1;
+//   }
+//   .example_2 {
+//     grid-area: example_2;
+//   }
+//   .example_3 {
+//     grid-area: example_3;
+//   }
+//   .example_4 {
+//     grid-area: example_4;
+//   }
+//   .example_5 {
+//     grid-area: example_5;
+//   }
+//   .example_6 {
+//     grid-area: example_6;
+//   }
+// }

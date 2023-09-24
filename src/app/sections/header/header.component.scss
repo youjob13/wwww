@@ -1,10 +1,14 @@
 @import "../../core.scss";
 
+#toggle {
+  display: none;
+}
+
 :host {
   @include container;
 
   position: absolute;
-  z-index: 99;
+  z-index: 111;
   left: 0;
   right: 0;
   top: 0;
@@ -22,13 +26,60 @@
   @include text-hover;
 
   cursor: pointer;
-  color: rgb(9, 9, 10);
+  color: $black;
 }
 
 @media (max-width: 1024px) {
+  :host {
+    @include flex-center;
+  }
+
+  .hamburger {
+    width: px-to-rem(32px);
+    height: px-to-rem(45px);
+  }
+
+  .hamburger div {
+    position: relative;
+    width: px-to-rem(48px);
+    height: px-to-rem(7px);
+    border-radius: px-to-rem(3px);
+    background-color: $black;
+    margin-top: px-to-rem(8px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+  }
+  #toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  #toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: px-to-rem(-7px);
+  }
+
   .list {
+    transition: 0.4s all;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 99;
+    transform: scale(0);
+    bottom: 0;
+    left: 0;
+    right: 0;
     column-gap: px-to-rem(10px);
     padding: 0;
     font-size: px-to-rem(16px);
+  }
+
+  #toggle:checked + .hamburger + .list {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
   }
 }

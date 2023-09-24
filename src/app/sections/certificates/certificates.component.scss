@@ -65,9 +65,8 @@ svg path {
   stroke-dasharray: 0;
   stroke-dashoffset: 0;
   stroke-width: 0.4;
-  stroke: #000;
+  stroke: $black;
   fill: none;
-  transition: stroke-dashoffset 1s;
 }
 
 @media (max-width: 1024px) {

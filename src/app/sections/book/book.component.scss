@@ -22,7 +22,7 @@
 .service-type {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #eee;
+  border: 1px solid $white-20;
   padding: px-to-rem(35px) px-to-rem(30px);
 }
 
@@ -36,10 +36,10 @@
     @include flex-center;
     position: relative;
     height: 100%;
-    background-color: rgb(26, 26, 26);
+    background-color: $black;
     border-radius: 50%;
     width: px-to-rem(25px);
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -59,8 +59,8 @@
 }
 
 .button {
-  background-color: rgb(26, 26, 26);
-  color: #fff;
+  background-color: $black;
+  color: $white;
   padding: px-to-rem(5px) px-to-rem(30px);
   transition: 0.4s all;
 
