@@ -21,14 +21,17 @@ export class ExamplesComponent {
 
   constructor(private readonly renderer: Renderer2) {}
 
-  private isZoomed = false;
+  public readonly images = [
+    'assets/examples/1.jpg',
+    'assets/examples/2.jpg',
+    'assets/examples/3.jpg',
+    'assets/examples/4.jpg',
+    'assets/examples/5.jpg',
+    'assets/examples/6.jpg',
+  ];
 
-  public zoomPhoto(element: Element) {
-    if (this.isZoomed) {
-      this.renderer.addClass(element, 'zoomed');
-    } else {
-      this.renderer.removeClass(element, 'zoomed');
-    }
-    this.isZoomed = !this.isZoomed;
+  public openOnFullscreen(element: Element) {
+    element.requestFullscreen();
+    this.renderer.addClass(element, 'fullscreen');
   }
 }

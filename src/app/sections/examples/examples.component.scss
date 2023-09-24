@@ -69,6 +69,10 @@ img {
   @include image-fit;
 }
 
+.fullscreen {
+  object-fit: contain;
+}
+
 // @media (max-width: 1024px) {
 //   .examples {
 //     grid-template-columns: 1fr 1fr;
