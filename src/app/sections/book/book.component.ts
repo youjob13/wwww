@@ -16,11 +16,11 @@ interface IService {
   imports: [CommonModule, TranslocoModule],
 })
 export class BookComponent {
+  @HostBinding('id') readonly id = 'book';
+
   public readonly services: Array<IService> = [
     { name: 'Nails', price: '$25' },
     { name: 'Super nails', price: '$45' },
     { name: 'Puper nails', price: '$65' },
   ];
-
-  @HostBinding('id') readonly id = 'schedule-appointment';
 }

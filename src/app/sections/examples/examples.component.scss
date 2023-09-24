@@ -13,9 +13,9 @@
 
 .title {
   @include medium-font;
+  @include title;
 
   padding-left: px-to-rem(50px);
-  font-size: px-to-rem(46px);
 }
 
 .examples {

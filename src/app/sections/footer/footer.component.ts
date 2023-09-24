@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
@@ -10,4 +10,6 @@ import { TranslocoModule } from '@ngneat/transloco';
   standalone: true,
   imports: [CommonModule, TranslocoModule],
 })
-export class FooterComponent {}
+export class FooterComponent {
+  @HostBinding('id') readonly id = 'contacts';
+}

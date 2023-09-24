@@ -109,3 +109,10 @@ $text-color-1: #0c0b09;
   font-family: Poppins;
   font-weight: 600;
 }
+
+@mixin title {
+  @include medium-font;
+
+  font-size: px-to-rem(44px);
+  line-height: 1.2;
+}

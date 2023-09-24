@@ -18,9 +18,8 @@
 
 .title {
   @include medium-font;
+  @include title;
 
-  font-size: px-to-rem(46px);
-  line-height: 1.2;
   margin-bottom: px-to-rem(20px);
   color: $text-color-1;
 }
