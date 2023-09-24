@@ -16,6 +16,11 @@
   transform-style: inherit;
 }
 
+.title-wrapper,
+.subtitle {
+  transition: 0.4s all;
+}
+
 .title-wrapper {
   position: relative;
 
