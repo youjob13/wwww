@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  ElementRef,
   HostBinding,
   Renderer2,
+  inject,
 } from '@angular/core';
 import { TranslocoModule } from '@ngneat/transloco';
 
@@ -19,7 +19,7 @@ import { TranslocoModule } from '@ngneat/transloco';
 export class ExamplesComponent {
   @HostBinding('id') readonly id = 'examples';
 
-  constructor(private readonly renderer: Renderer2) {}
+  private readonly renderer = inject(Renderer2);
 
   public readonly images = [
     'assets/examples/1.jpg',
