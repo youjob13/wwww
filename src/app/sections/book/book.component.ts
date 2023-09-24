@@ -17,8 +17,8 @@ interface IService {
 export class BookComponent {
   public readonly services: Array<IService> = [
     { name: 'Nails', price: '$25' },
-    { name: 'Наращивание', price: '$45' },
-    { name: 'Супер пупер ноготочки', price: '$65' },
+    { name: 'Super nails', price: '$45' },
+    { name: 'Puper nails', price: '$65' },
   ];
 
   @HostBinding('id') readonly id = 'schedule-appointment';

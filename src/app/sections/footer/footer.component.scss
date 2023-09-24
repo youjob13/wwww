@@ -1,0 +1,49 @@
+@import "../../core.scss";
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  padding: px-to-rem(35px) 0 px-to-rem(25px);
+  background-color: $black;
+  color: $white;
+  border-radius: 20% 50% 0 0/30% 33% 0 0;
+}
+
+.wrapper {
+  @include container;
+}
+
+.title {
+  @include medium-font;
+
+  text-align: center;
+  font-size: px-to-rem(26px);
+  line-height: 1.2;
+  margin-bottom: px-to-rem(35px);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.text {
+  @include regular-font;
+  @include text-hover;
+
+  color: $white;
+  text-decoration: none;
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-end;
+
+  .svg {
+    width: px-to-rem(80px);
+  }
+}
