@@ -10,7 +10,7 @@ export class TranslocoHttpLoader implements TranslocoLoader {
   getTranslation(lang: string) {
     return fetch(
       `${
-        !isDevMode() ? 'https://youjob13.github.io/wwww/docs' : ''
+        !isDevMode() ? 'https://youjob13.github.io/wwww' : ''
       }/assets/i18n/${lang}.json`
     ).then<Translation>((res) => res.json());
     // return this.http.get<any>(`/assets/i18n/${lang}.json`).pipe(
