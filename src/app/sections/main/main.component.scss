@@ -2,7 +2,6 @@
 
 :host {
   @include section-gap-bottom;
-  @include container;
 
   position: relative;
   text-align: center;
@@ -38,7 +37,7 @@
   color: $white;
   padding: px-to-rem(20px) px-to-rem(30px);
   user-select: none;
-  animation: text-anim 9.65s linear;
+  animation: text-anim 7.65s linear;
   animation-iteration-count: infinite;
 }
 
