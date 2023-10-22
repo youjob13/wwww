@@ -26,6 +26,7 @@ p {
   max-width: 90%;
   display: block;
   margin: 0 auto;
+  margin-top: px-to-rem(120px);
 }
 
 .title,
@@ -39,7 +40,7 @@ p {
   animation-iteration-count: infinite;
   position: relative;
   text-align: left;
-  top: px-to-rem(-32px);
+  top: px-to-rem(-90px);
   left: px-to-rem(-68px);
 }
 

@@ -12,7 +12,7 @@
   @include container;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .title {
@@ -20,9 +20,8 @@
   @include title;
 
   position: relative;
-  margin-bottom: px-to-rem(20px);
-  margin-left: px-to-rem(52px);
-  text-align: right;
+  margin-bottom: px-to-rem(40px);
+  text-align: center;
 
   &::after,
   &::before {
@@ -62,46 +61,23 @@ img {
 .content-wrapper {
   @include regular-font;
 
+  font-size: px-to-rem(26px);
+  text-align: center;
   padding: px-to-rem(100px) 0;
   line-height: px-to-rem(26px);
 }
 
-.flower {
-  position: absolute;
-  top: 0;
-  left: 6%;
-  width: px-to-rem(400px);
-  z-index: 99;
-}
-
-svg path {
-  stroke-dasharray: 0;
-  stroke-dashoffset: 0;
-  stroke-width: 0.4;
-  stroke: $black;
-  fill: none;
-}
-
-.nails {
-  position: absolute;
-  top: 48%;
-  left: 70%;
-  width: px-to-rem(550px);
-  z-index: 99;
-}
-
 @media (max-width: 1024px) {
-  .component-container {
-    grid-template-columns: 1fr;
+  .title {
+    margin-bottom: px-to-rem(20px);
+    margin-left: px-to-rem(52px);
+    text-align: right;
+    margin-bottom: 0;
   }
-
   .content-wrapper {
-    padding: px-to-rem(40px) 0;
-  }
+    @include regular-font;
 
-  .flower {
-    width: px-to-rem(300px);
-    top: px-to-rem(-110px);
-    left: px-to-rem(-50px);
+    text-align: left;
+    padding: px-to-rem(40px) 0;
   }
 }

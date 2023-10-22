@@ -52,11 +52,6 @@
   .section-title {
     @include medium-font;
     @include title;
-
-    // &::before {
-    //   counter-increment: section;
-    //   content: counter(section);
-    // }
   }
 }
 
