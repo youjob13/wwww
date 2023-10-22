@@ -6,6 +6,7 @@
   margin: 0 auto;
   counter-reset: section;
   background-color: $white;
+  padding-top: px-to-rem(40px);
 }
 
 .wrapper {
@@ -30,8 +31,11 @@
 .section-title {
   display: flex;
   position: relative;
+  justify-content: center;
+  align-items: center;
   column-gap: px-to-rem(10px);
   left: px-to-rem(-30px);
+  padding-bottom: px-to-rem(20px);
 
   &::before {
     @include flex-center;

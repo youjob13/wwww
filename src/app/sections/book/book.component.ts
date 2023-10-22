@@ -16,7 +16,7 @@ interface IService {
   imports: [CommonModule, TranslocoModule],
 })
 export class BookComponent {
-  @HostBinding('id') readonly id = 'book';
+  @HostBinding('id') readonly id = 'price';
 
   public readonly services: Array<IService> = [
     { name: 'Маникюр + покрытие (от 35€)', price: '35€' },
