@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import Components from './components';
@@ -9,7 +10,14 @@ import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, Components, NgbModule, HttpClientModule, TranslocoRootModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    Components,
+    NgbModule,
+    HttpClientModule,
+    TranslocoRootModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

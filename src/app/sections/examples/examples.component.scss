@@ -3,12 +3,20 @@
 :host {
   display: block;
   position: relative;
-  background-color: $beige;
+  background-color: $white;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .wrapper {
-  @include section-gap;
-  @include container;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  @include btn;
 }
 
 .title {

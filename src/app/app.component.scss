@@ -1,3 +1,5 @@
+@import "./core.scss";
+
 .parallax-wrapper {
   height: 100vh;
   overflow: hidden;
@@ -11,4 +13,5 @@
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: $bg-color;
 }

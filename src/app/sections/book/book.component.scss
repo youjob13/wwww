@@ -1,9 +1,9 @@
 @import "../../core.scss";
 
 :host {
-  @include container;
-  @include section-gap;
-
+  display: block;
+  max-width: 95%;
+  margin: 0 auto;
   counter-reset: section;
   background-color: $white;
 }
@@ -46,10 +46,13 @@
 
 .section {
   .section-title {
-    &::before {
-      counter-increment: section;
-      content: counter(section);
-    }
+    @include medium-font;
+    @include title;
+
+    // &::before {
+    //   counter-increment: section;
+    //   content: counter(section);
+    // }
   }
 }
 

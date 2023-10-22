@@ -7,10 +7,9 @@ li {
 }
 
 footer {
+  position: relative;
   padding: px-to-rem(35px) 0 px-to-rem(25px);
-  background-color: $black;
-  color: $white;
-  border-radius: 20% 50% 0 0/30% 33% 0 0;
+  color: $black;
 }
 
 .wrapper {
@@ -20,6 +19,7 @@ footer {
 .title {
   @include medium-font;
 
+  color: $main-btn-bg-color;
   text-align: center;
   font-size: px-to-rem(26px);
   line-height: 1.2;
@@ -35,7 +35,7 @@ footer {
   @include regular-font;
   @include text-hover;
 
-  color: $white;
+  color: $main-btn-bg-color;
   text-decoration: none;
 }
 

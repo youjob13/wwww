@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <h2 class="title">{{ "examples.title" | transloco }}</h2>
+  <h2 class="title">Works</h2>
   <div class="examples">
     <div
       *ngFor="let image of images; index as i"
@@ -8,4 +8,10 @@
       <img #imageRef (click)="openOnFullscreen(imageRef)" [src]="image" />
     </div>
   </div>
+  <a
+    class="button"
+    href="https://www.instagram.com/annushkka.nails/"
+    target="_blank"
+    >Посмотреть ещё</a
+  >
 </div>

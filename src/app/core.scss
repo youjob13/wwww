@@ -2,6 +2,8 @@
 
 // Variables
 
+$main-btn-bg-color: #714e38;
+$bg-color: #c5a58e;
 $base-font-size: 16px;
 $white: #fff;
 $white-20: #eee;
@@ -106,6 +108,11 @@ $text-color-1: #0c0b09;
   font-weight: 700;
 }
 
+@mixin thin-font {
+  font-family: Poppins;
+  font-weight: 300;
+}
+
 @mixin medium-font {
   font-family: Poppins;
   font-weight: 600;
@@ -114,6 +121,17 @@ $text-color-1: #0c0b09;
 @mixin title {
   @include medium-font;
 
+  color: #b49987;
   font-size: px-to-rem(44px);
   line-height: 1.2;
+}
+
+@mixin btn {
+  @include regular-font;
+
+  text-decoration: none;
+  margin-top: px-to-rem(28px);
+  background-color: $main-btn-bg-color;
+  color: $white;
+  padding: px-to-rem(16px) px-to-rem(42px);
 }

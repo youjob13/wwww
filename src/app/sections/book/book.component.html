@@ -1,26 +1,25 @@
 <div class="wrapper">
   <form class="form">
     <div class="section">
-      <div class="section-title expanded">
-        <h5>{{ "book.title" | transloco }}</h5>
-      </div>
+      <!-- <div class="section-title expanded"> -->
+      <h5 class="section-title">Prices</h5>
+      <!-- </div> -->
 
       <ng-container *ngFor="let service of services">
         <div class="service-type">
           <div class="description">
             <span class="title">{{ service.name }}</span>
-            <span class="price">{{ service.price }}</span>
           </div>
 
-          <button class="button">{{ "book.button" | transloco }}</button>
+          <!-- <button class="button">{{ "book.button" | transloco }}</button> -->
         </div>
       </ng-container>
     </div>
 
-    <div class="section">
+    <!-- <div class="section">
       <div class="section-title collapsed">
         <h5>{{ "book.dateTitle" | transloco }}</h5>
       </div>
-    </div>
+    </div> -->
   </form>
 </div>

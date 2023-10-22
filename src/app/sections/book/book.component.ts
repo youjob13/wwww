@@ -19,8 +19,9 @@ export class BookComponent {
   @HostBinding('id') readonly id = 'book';
 
   public readonly services: Array<IService> = [
-    { name: 'Nails', price: '$25' },
-    { name: 'Super nails', price: '$45' },
-    { name: 'Puper nails', price: '$65' },
+    { name: 'Маникюр + покрытие (от 35€)', price: '35€' },
+    { name: 'Маникюр (от 25€)', price: '$45' },
+    { name: 'Наращивание ногтей 1-2 (от 45€)', price: '$65' },
+    { name: 'Наращивание ногтей 3-4 (от 55€)', price: '$65' },
   ];
 }

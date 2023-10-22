@@ -1,12 +1,11 @@
 @import "../../core.scss";
 
 :host {
-  @include section-gap;
-
   position: relative;
   display: block;
-  min-height: 100vh;
   background-color: #fff;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .component-container {
@@ -20,8 +19,36 @@
   @include medium-font;
   @include title;
 
+  position: relative;
   margin-bottom: px-to-rem(20px);
-  color: $text-color-1;
+  margin-left: px-to-rem(52px);
+  text-align: right;
+
+  &::after,
+  &::before {
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height: px-to-rem(3px);
+    width: px-to-rem(26px);
+    display: block;
+    background-color: $bg-color;
+  }
+
+  &::before {
+    left: px-to-rem(-70px);
+  }
+
+  &::after {
+    left: px-to-rem(-36px);
+  }
+}
+
+.text {
+  @include regular-font;
+
+  color: #a1999a;
 }
 
 .image-wrapper {

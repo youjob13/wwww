@@ -32,6 +32,12 @@ export class MainComponent implements AfterViewInit {
   private readonly document = inject(DOCUMENT);
   private wrapper: Element | null = null;
 
+  constructor() {}
+
+  public makeRequest() {
+    window.open('https://web.telegram.org/k/#@annushka_nails_bot', '_blank');
+  }
+
   ngAfterViewInit(): void {
     this.wrapper = this.document.querySelector('.inner-body');
 
